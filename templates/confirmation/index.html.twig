@@ -1,0 +1,202 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Confirmation Reservation{% endblock %}
+
+{% block body %}
+<!-- <body style="margin: 0 !important; padding: 0 !important; background-color: #ECF8F6;" bgcolor="#ECF8F6"> -->
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>  
+        <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px;">
+            <tr>
+                <td align="center" valign="top" style="font-size:0; padding: 35px;">
+               
+                
+                    <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:300px;">
+                        
+                                
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+                
+                    <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:300px;">
+                        <tr>
+                            <td align="right" valign="top" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 48px; font-weight: 400; line-height: 48px;">
+                                <table cellspacing="0" cellpadding="0" border="0" align="right">
+                                                                      
+                                                        </td>
+                                        <td style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 24px;">
+                                                                </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+              
+                </td>
+            </tr>
+            <tr>
+                <td align="center" style="padding: 35px 35px 20px 35px; background-color: #ECF8F6;" bgcolor="#ffffff">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px;">
+                    <tr>
+                        <td align="center" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding-top: 25px;">
+                            <img src="https://img.icons8.com/carbon-copy/100/000000/checked-checkbox.png" width="125" height="120" style="display: block; border: 0px;" /><br>
+                            <h2 style="font-size: 30px; font-weight: 800; line-height: 36px; color: #333333; margin: 0;">
+                                Merci Pour Votre Réservation!
+                            </h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding-top: 10px;">
+                            <p style="font-size: 16px; font-weight: 400; line-height: 24px; color: #777777;">
+                                
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" style="padding-top: 20px;">
+                            <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                <tr>
+                                    <td width="75%" align="left" bgcolor="white" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 800; line-height: 24px; padding: 10px;">
+                                        Confirmation de réservation #
+                                    </td>
+                                    <td width="25%" align="left" bgcolor="white" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 800; line-height: 24px; padding: 10px;">
+                                        {{reservation.id}}
+                                    </td>
+                                </tr>
+                                 
+                                {% if voiture %} 
+                                <tr>
+                                    <td width="75%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 15px 10px 5px 10px;">
+                                        Duree de la reservation: 
+                                    </td>
+                                    <td width="25%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 15px 10px 5px 10px;">
+                                        <b>{{reservation.dureeLocation}}</b>
+                                    </td>
+                                </tr>
+                                {% endif %}
+                                <tr>
+                                    <td width="75%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;">
+                                       Modèle de voiture:
+                                    </td>
+                                    <td width="25%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;">
+                                        <b>{{voiture.name}}</b>
+                                    </td>
+                                </tr>
+                                
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" style="padding-top: 20px;">
+                            <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                <tr>
+                                    <td width="75%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 800; line-height: 24px; padding: 10px; border-top: 3px solid white; border-bottom: 3px solid white;">
+                                        TOTAL
+                                    </td>
+                                    <td width="25%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 800; line-height: 24px; padding: 10px; border-top: 3px solid white; border-bottom: 3px solid white;">
+                                        {{reservation.tarifLocation}}€
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                
+                </td>
+            </tr>
+             <tr>
+                <td align="center" height="100%" valign="top" width="100%" style="padding: 0 35px 35px 35px; background-color: #ECF8F6;" bgcolor="#ECF8F6">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:660px;">
+                    <tr>
+                        <td align="center" valign="top" style="font-size:0;">
+                            <div style="display:inline-block; max-width:50%; min-width:240px; vertical-align:top; width:100%;">
+
+                                <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:300px;">
+                                    <tr>
+                                        <td align="left" valign="top" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px;">
+                                            <p style="font-weight: 800;">Adresse de récupération: </p>
+                                            <p>Agence Loc In Hour<br>12 rue du bas<br>92600 Asnières-sur-Seine</p>
+
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div style="display:inline-block; max-width:50%; min-width:240px; vertical-align:top; width:100%;">
+                                <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:300px;">
+                                    <tr>
+                                        <td align="left" valign="top" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px;">
+                                            <p style="font-weight: 800;">Information:</p>
+                                            <p>Arriver 30 minutes avant l'heure de location.</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" style=" padding: 35px; background-color: #FEEAA1        ;" bgcolor="#1b9ba3">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px;">
+                    <tr>
+                        <td align="center" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding-top: 25px;">
+                            <h2 style="font-size: 24px; font-weight: 800; line-height: 30px; color: #ffffff; margin: 0;">
+                                Voir ma réservation
+                            </h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding: 25px 0 15px 0;">
+                            <table border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td align="center" style="border-radius: 5px;" bgcolor="#66b3b7">
+                                      <a href="{{ path('app_user_profile_show') }}" target="_blank" style="font-size: 18px; font-family: Open Sans, Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; border-radius: 5px; background-color: #18534f; padding: 15px 30px; border: none; display: block;">Mon espace client</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" style="padding: 35px; background-color: #ECF8F6;" bgcolor="#ffffff">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px;">
+                    <tr>
+                        <td align="center">
+                            <img src="../images/logoconfirmation.png" width="100px" height="80px" style="display: block; border: 0px;"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 24px; padding: 5px 0 10px 0;">
+                            <p style="font-size: 14px; font-weight: 800; line-height: 18px; color: #333333;">Siège social<br>
+                                675 Parko Avenue<br>
+                                LA, CA 02232
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 24px;">
+                            {# <p class="mx-auto" style="font-size: 14px; font-weight: 400; line-height: 20px; color: #777777;">
+                                Un <a href="#" target="_blank" style="color: #777777;">mail de confirmation</a> vous a été adressé .
+                            </p> #}
+                        </td>
+                    </tr>
+                </table>
+                </td>
+            </tr>
+        </table>
+        </td>
+    </tr>
+</table>
+<br>
+<br>
+{% endblock %}
+{% block footer %}
+{% endblock %}

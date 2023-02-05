@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nos voitures{% endblock %}
+
+{# {% block stylesheets %}
+<link href="{{ asset('css/style1.css') }}" rel="stylesheet" />
+{% endblock %} #}
+
+{% block body %}
+{% include "includes/navsecondaire.html.twig" %}
+<div class="container mt-5">
+        <div class="main-body">
+        
+              
+        
+              <div class="row gutters-sm">
+                <div class="col-md-4 mb-3">
+                  <div class="card" style="border: none; overflow: hidden; box-shadow: 0 0 10px grey;">
+                    <div class="card-body">
+                      <div class="d-flex flex-column align-items-center text-center">
+                        <img src="/images/user.jpg" alt="Admin" class="rounded-circle" width="150">
+                        <div class="mt-3">
+                        {{ form_start(form) }}
+
+                          <h4>{{user.name}}</h4>
+                         
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                 
+                </div>
+                <div class="col-md-8">
+                  <div class="card mb-3">
+                    <div class="card-body" style="border: none; overflow: hidden; box-shadow: 0 0 10px grey;">
+                      <div class="row">
+                        <div class="p-5">
+                            {{ form_widget(form, {'attr': {'class': 'foo'}}) }}
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+    
+    
+    
+                
+              {{ form_end(form) }}      
+            
+        <button class="button" style="border: 1px solid #18534f; background-color: #18534f; color: white;">{{ button_label|default('Save') }}</button>
+             
+{% block footer %}
+{% endblock %}   
+{% endblock %}

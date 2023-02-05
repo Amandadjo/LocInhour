@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg" style="background-color: #226D68;" style="color: white;" >
+        <div class="container-fluid">
+          <a class="navbar-brand ms-5 text-white" href="{{ path('app_home') }}">Loc in hour</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+  
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="{{ path('app_home') }}"><i class="bi bi-house-door text-light"></i> Accueil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="{{ path('app_voitures') }}"><i class="bi bi-car-front text-light ms-3"></i> Nos voitures</a>
+              </li>
+              {# <li class="nav-item">
+                <a class="nav-link" href="#"><i class="bi bi-car-front"></i> Réservations</a>
+              </li> #}
+               {% if app.user %}
+             <li class="nav-item">
+             <a class="nav-link text-light" href="{{ path('app_logout') }}" type="submit">
+                            <i class="bi-person-x me-1 text-light"></i>
+                            Se deconnecter
+                        </a>
+              </li>
+
+              <li class="nav-item">
+             <a class="nav-link text-light" href="{{ path('app_user_profile_show') }}" type="submit">
+                            <i class="bi bi-person-check text-light"></i>
+                            Mon profil
+                        </a>
+              </li>
+
+              {% else %}
+              <li class="nav-item">
+                <a class="nav-link text-light" href="{{ path('app_register') }}"><i class="bi bi-person-fill-add text-light "></i>Inscription</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="{{ path('app_login') }}"><i class="bi bi-person text-light ms-2"></i> Connexion</a>
+              </li>
+           {% endif %}
+            </ul>
+          </div>
+        </div>
+</nav>
+

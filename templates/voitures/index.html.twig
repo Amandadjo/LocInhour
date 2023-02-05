@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nos voitures{% endblock %}
+
+{% block stylesheets %}
+<link href="{{ asset('css/styles.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block body %}
+
+{% include "includes/navsecondaire.html.twig" %}
+
+<div class="container px-5 mt-4">
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    {% for voiture in voitures %}
+  <div class="col">
+    
+    <div class="card h-100 mx-auto" style="width: 18rem;">
+    
+      <img src="{{asset(voiture.images)}}" class="card-img-top" alt="">
+      <div class="card-body">
+        <h5 class="card-title text-dark">{{ voiture.name }}</h5>
+        <p class="card-text">{{ voiture.boite }}</p>
+        {# bouton avec lien  #}
+        <a class="btn btn-outline-dark mb-2"  href="{{ path('voitures_show', {id: voiture.id}) }}" role="button">
+        <h3 class="no-padding">{{ voiture.prix }}€</h3>
+        <p id="description" class="no-padding">{{ voiture.description }}</p>
+        </a>       
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+</div>
+{% block footer %}
+{% endblock %}
+{% endblock %}
+

@@ -1,0 +1,112 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ReservationController!{% endblock %}
+
+{% block stylesheets %}
+<link href="{{ asset('css/styles.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block body %}
+{% include "includes/navsecondaire.html.twig" %}
+
+    <div class="mx-auto">
+      
+    <section class="vh-100">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-xl-10">
+        <div class="card" style="border-radius: 1rem;">
+          <div class="row g-0">
+            <div class="col-md-6 col-lg-5 d-none d-md-block">
+              <img src="../images/b.png" width="108%" height="100%"
+                alt="login form"  style="border-radius: 1rem 0 0 1rem;" />
+            </div>
+            <div class="col-md-6 col-lg-7 d-flex align-items-center">
+              <div class="card-body p-4 p-lg-5 text-black">
+
+                {{ form_start(formReservation) }}
+
+                  <div class="d-flex align-items-center mb-3 pb-1">
+                    
+                    <span class="h1 fw-bold mb-0" style="color: #18534f;">Formulaire de réservation</span>
+                  </div>
+                  
+                  <div class="alert alert-warning" role="alert">
+                  Modèle de voiture réservé : <u>{{voiture.name}}</u>
+                  </div>
+                  
+
+                    <div class="form-outline mb-4">
+                    {{ form_row(formReservation.name, {'attr': {'class': 'form-control form-control-lg' }})}}
+                  </div>
+                    
+                  <div class="form-outline mb-4">
+                    {{ form_row(formReservation.lastName, {'attr': {'class': 'form-control form-control-lg' }})}}
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    {{ form_row(formReservation.numeroPermis, {'attr': {'class': 'form-control form-control-lg' }})}}
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    {{ form_row(formReservation.dateReservation, {'attr': {'class': 'form-control form-control-lg' }})}}
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    {{ form_row(formReservation.finReservation, {'attr': {'class': 'form-control form-control-lg' }})}}
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    {{ form_row(formReservation.imageFile, {'attr': {'class': 'form-control form-control-lg' }})}}
+                  </div>
+
+                  <button type="submit" class="custom-button">Réserver</button>
+                {{ form_end(formReservation) }}
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+{% endblock %}
+{% block footer %}
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit User{% endblock %}
+
+{% block body %}
+
+<style>
+    .button { margin: auto; margin-top: 40px; margin-left:30%; margin-bottom: 30%; }
+    .col-xs-4 {width: 50px;}
+</style>
+
+    {{ include('user_profile/_form.html.twig', {'button_label': 'Enregistrer'}) }}
+
+    <a href="{{ path('app_user_profile_show') }}" style="border: 1px solid #18534f; background-color: #18534f; color: white;">Retour au profile</a>
+
+    {{ include('user_profile/_delete_form.html.twig') }}
+
+
+
+{% block footer %}
+{% endblock %}   
+{% endblock %}

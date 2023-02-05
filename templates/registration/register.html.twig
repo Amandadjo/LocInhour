@@ -1,0 +1,67 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+  Register
+{% endblock %}
+
+{% block body %}
+
+<section class="vh-100">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-xl-10">
+        <div class="card" style="border-radius: 1rem; border: none; overflow: hidden; box-shadow: 0 0 10px grey;">
+          <div class="row g-0">
+            <div class="col-md-6 col-lg-5 d-none d-md-block">
+   <img src="images/femme.png" height="110%" width="105%"
+                alt="login form"  style="border-radius: 1rem 0 0 1rem;" />             </div>
+            <div class="col-md-6 col-lg-7 d-flex align-items-center">
+              <div class="card-body p-4 p-lg-5 text-black">  
+                <span class="h1 fw-bold mb-0" style="color: #18534f;"><b>Inscrivez-vous</b></span><br><br>
+  {{ form_start(registrationForm) }}
+<div class="form-outline mb-4">
+                {{ form_row(registrationForm.email, {'attr': {'class': 'form-control form-control-lg' }})}}
+                  </div>
+                    
+                  <div class="form-outline mb-4">
+                    {{ form_row(registrationForm.name, {'attr': {'class': 'form-control form-control-lg' }})}}
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    {{ form_row(registrationForm.last_name, {'attr': {'class': 'form-control form-control-lg' }})}}
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    {{ form_row(registrationForm.permis, {'attr': {'class': 'form-control form-control-lg' }})}}
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    {{ form_row(registrationForm.phone, {'attr': {'class': 'form-control form-control-lg' }})}}
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    {{ form_row(registrationForm.adress, {'attr': {'class': 'form-control form-control-lg' }})}}
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    {{ form_row(registrationForm.plainPassword, {'attr': {'class': 'form-control form-control-lg' }})}}
+                  </div>
+  
+
+    <div class="pt-1 mb-4">
+                    <button class="btn  btn-lg btn-block" style="border: 1px solid #18534f; background-color: #18534f; color:white;" type="submit">S'inscrire</button>
+                  </div>
+                  <p class="mb-5 pb-lg-2" style="color: #393f81;">Vous avez déjà un compte ? <a href="{{ path('app_login') }}"
+                      style="color: #393f81;">Connectez-vous ici</a></p>
+                {{ form_end(registrationForm) }}
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ {% block footer %}
+{% endblock %}
+{% endblock %}

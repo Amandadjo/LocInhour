@@ -1,0 +1,176 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/stylehome.css') }}">
+{% endblock %}
+
+{% block body %}
+
+
+
+ <header id="header">
+  {% include "includes/nav.html.twig" %}
+      <form class="custom-container">
+        <fieldset class="form">
+          <h1 class="accroche"><b> Louer une voiture en <span class="span"> quelques clics !</span></b></h1>
+          <div class="mb-3 mt-4">
+          <div class="input-group input-group-lg">
+          <span class="input-group-text bg-white" id="inputGroup-sizing-lg"><i class="bi bi-geo-alt"></i></span>
+          <input type="text" class="form-control" placeholder="Adresse précise, gare, métro..." aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+      </div>
+          <br>
+          <div class="input-group input-group-lg reduce">
+          <span class="input-group-text bg-white" id="inputGroup-sizing-lg"></span>
+          <input type="datetime-local" class="form-control" aria-label="Sizing example input" value="Début" aria-describedby="inputGroup-sizing-lg">
+      </div>
+       <br>
+       <div id="input-group" class="input-group input-group-lg ">
+          <span class="input-group-text bg-white" id="inputGroup-sizing-lg"></span>
+          <input type="datetime-local" class="form-control" aria-label="Sizing example input" value="Fin" aria-describedby="inputGroup-sizing-lg">
+      </div>
+
+          </div>
+            <a href="{{ path('app_voitures') }}" type="button" class="btn btn-primary" id="btn-header">Rechercher</a>
+
+          </div>
+        
+          
+
+
+
+          
+        </fieldset>
+      </form>
+      
+        
+      </header>
+      {# CAROUSEL #}
+    <div id="carouselExampleInterval" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="5000">
+            <div class="cars-cards">
+                <div class="card bg-white">
+                    <img src="../images/accueil/5008vert.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Peugeot 5008</h5><br>
+                  
+                    </div>
+                  </div>
+                  <div class="card bg-white">
+                    <img src="../images/accueil/aygorouge.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Toyota Aygo</h5><br>
+                  
+                    </div>
+                  </div>
+                  <div class="card bg-white">
+                    <img src="../images/accueil/citroenblanc.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Citroën</h5><br>
+                  
+                    </div>
+                  </div>
+                  <div class="card bg-white">
+                    <img src="../images/accueil/opelcorsa.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Opel Corsa</h5><br>
+                  
+                    </div>
+                  </div>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+            <div class="cars-cards">
+                <div class="card bg-white">
+                    <img src="../images/accueil/peugeot-208-active-configurateur.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Peugeot 208</h5><br>
+                  
+                    </div>
+                  </div>
+                  <div class="card bg-white">
+                    <img src="../images/accueil/peugeot108.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Peugeot 108</h5><br>
+                  
+                    </div>
+                  </div>
+                  <div class="card bg-white">
+                    <img src="../images/accueil/renonoir.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Renault Kadjar</h5><br>
+                  
+                    </div>
+                  </div><div class="card bg-white">
+                    <img src="../images/accueil/twingojaune.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Renault Twingo</h5><br>
+                  
+                    </div>
+                  </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+        <div class="voir-tout ms-auto">
+          <div class="arrow"><a href=""><strong>Toutes nos voitures</strong>
+            <i class="bi bi-arrow-right"></i></a></div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+    
+    
+      {# OFFRES ET ACTUS #}
+
+      <div class="card-axa mb-3">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="../images/accueil/conductrice.jpg" class="img-fluid" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Loc in hour en partenariat avec la MAAF !</h5>
+              <p class="card-text" id="text-maaf">Tous nos véhicules sont assurés ainsi que tous nos clients. Nous proposons une assurance auto qui se décline 
+              en 4 formules que nous vous invitons à découvrir dans nos conditions générales.  Nous faisons également un point 
+              sur toutes les options qui peuvent venir personnaliser au mieux votre couverture en fonction de vos 
+              besoins et de votre budget.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br><br><br>
+      <h2 class="galery-title">Louez, où que vous soyez</h2>
+      <div class="galery-ville">
+        <div class="gallery-card ">
+        <img src="../images/accueil/paris.jpg" class="img-thumbnail" alt="...">
+        <h5 class="nom-ville mx-auto"><strong>Paris</strong></h5>
+        </div>
+        <div class="gallery-card">
+        <img src="../images/accueil/Marseille.jpg" class="img-thumbnail" alt="...">
+        <h5 class="nom-ville mx-auto"><strong>Marseille</strong></h5></div>
+        <div class="gallery-card">
+        <img src="../images/accueil/lyon.jpg" class="img-thumbnail" alt="...">
+        <h5 class="nom-ville mx-auto"><strong>Lyon</strong></h5></div>
+        
+        <div class="gallery-card">
+        <img src="../images/accueil/toulouse.jpg" class="img-thumbnail" alt="...">
+        <h5 class="nom-ville mx-auto"><strong>Toulouse</strong></h5>
+        
+     </div>
+     
+      </div>
+      
+      
+
+{% endblock %}

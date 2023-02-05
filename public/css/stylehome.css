@@ -1,0 +1,271 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+:root{
+    --one-color:#18534F;
+    --two-color:#226D68;
+    --three-color:#ECF8F6;
+    --four-color:#FEEAA1;
+    --five-color:#D6955B;
+}
+/*---------------NAVBAR / HEADER-------------*/
+header{
+    background-image: url("../images/accueil/header.png");
+    background-size: cover;
+    background-position: bottom center;;
+    background-repeat: no-repeat;
+    height: 750px;
+}
+
+#header a {
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+
+.navbar-brand{
+    letter-spacing: 10px;
+}
+
+
+/*------------------FORMULAIRE DE RESERVATION-------------*/
+.custom-container{
+    width: 500px ;
+    height: 100px;
+}
+
+form{
+    margin-top: 90px;
+    margin-left: 10%;
+}
+
+.accroche {
+    color: #18534F;
+}
+
+input.form-control, select.form-select, .datetime{
+    border-radius: 20px;
+    height: 50px;
+    border: none;
+}
+
+input.form-control, select.form-select, input.datetime::placeholder{
+    text-align: center;
+    color: #226D68;
+}
+input.datetime{
+    width: 200px;
+}
+
+.bg-light{
+    margin-left: 20px;
+}
+
+.btn-primary {
+    background-color: var(--one-color);
+    border-radius: 10px;
+    height: 50px;
+    width: 100%;
+    border: none;
+    color: var(--four-color);
+}
+
+
+/*--------------CAROUSEL----------------*/
+
+.cars-cards{
+    
+    display: flex;
+}
+
+.carousel-item {
+    padding: 70px;
+    height: 400px;
+}
+.card{
+
+    margin: 1em;
+    padding: 20px;
+    width: calc(100%/3);
+    border-radius: 1rem; 
+    border: none; 
+    overflow: hidden; 
+    box-shadow: 0 0 10px grey;
+    background-color: var(--three-color);
+    /* margin-bottom: 400px; */
+}
+
+.card-axa{
+    
+    margin-left: 5em;
+    padding: 20px;
+    width: 90%;
+    border-radius: 1rem; 
+    border: none; 
+    overflow: hidden; 
+    box-shadow: 0 0 10px grey;
+    background-color: var(--three-color);
+}
+
+.card-axa{
+    background-color: var(--three-color);
+}
+
+.card-body{
+    margin-left: 30px;
+}
+
+
+.carousel{
+    margin-top: 0.5em;
+}
+
+.btn-carousel-cards{
+    margin-top: 20px;
+    padding-bottom: 0.5em;
+    border: black;
+    border-radius: 15px;
+    padding: 10px;
+    background-color: var(--one-color);
+    color: var(--four-color);
+    text-decoration: none;
+    
+}
+
+
+
+.btn-carousel-cards:hover{
+    background-color: #226D68;
+}
+
+.card-title{
+    text-align: justify;
+    font-weight: bold;
+    color: #18534F !important;
+}
+
+/* .card-img-top{
+    height: 150px;
+    width: 50px;
+} */
+
+.carousel-control-prev-icon {
+    margin-right: 170px;
+}
+
+.carousel-control-next-icon {
+    margin-left: 170px;
+}
+
+.voir-tout{
+
+    display: flex;
+    
+}
+
+
+.voir-tout a, i{
+    text-decoration: none;
+    color: var(--one-color);
+    margin: left 70px;
+}
+
+/*-------FLECHE NOS VOITURES-------*/
+@keyframes right{
+	0% {position:relative; right:0px; opacity: 0}
+	50% {position:relative; right:15px; opacity: 0.5}
+	100% {position:relative; right:30px; opacity: 1}
+
+}
+
+.arrow {
+    margin-left:77%;
+    font-size: 25px;
+}
+
+.bi-arrow-right{
+    margin-left: 20px;
+	animation: right 1s infinite linear alternate;
+	width: 3%;
+}
+
+/*----------OFFRE / ACTUS----------*/
+.card-axa{
+    margin-bottom: 40px;
+    background-color: var(--three-color);
+}
+
+.card-body{
+    margin-left: 30px;
+}
+.col-md-4 .img-fluid{
+    height: 250px;
+}
+
+/*-----------GALLERY------------*/
+.galery-title{
+    
+    color: var(--one-color);
+    margin-left: 40px;
+}
+.galery-ville{
+    display: flex;
+}
+
+.img-thumbnail{
+    width: 300px;
+    height: 300px;
+    border-radius: 1rem;
+}
+
+.gallery-card{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    margin: auto;
+    border-radius: 30px;
+}
+
+.gallery-card .img-thumbnail{
+    margin: auto;
+    
+    border-radius: 1rem; 
+    border: none; 
+    overflow: hidden; 
+    box-shadow: 0 0 10px grey;
+    background-color: var(--three-color);
+}
+
+.nom-ville{
+    color: var(--one-color);
+}
+
+/*--------------FOOTER----------------*/
+.container{ 
+    height: 200px;
+}
+.text-uppercase{
+    color: var(--one-color);
+    font-size: 40px;
+}
+
+.footer-text{
+    color: var(--two-color);
+    font-size: 20px;
+}
+.footer{
+    background-color: rgb(213, 211, 211);
+    
+}
+
+.footer-links a{
+    margin-top: 40px;
+    font-size: 20px;
+    color: var(--two-color);
+    text-decoration: none;
+}
+
+.footer-links a:hover{
+    color: var(--four-color);
+}

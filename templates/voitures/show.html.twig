@@ -1,0 +1,225 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}LIH - Détail d'une voiture{% endblock %}
+
+{% block stylesheets %}
+<link href="{{ asset('css/styles.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block body %}
+{% include "includes/navsecondaire.html.twig" %}
+<div class="container mt-5 mb-5">	
+
+  <div class="card mx-auto" style="width: 70rem;">	
+    <div class="row g-0">	
+      <div class="col-md-6 border-end">	
+        <div class="d-flex flex-column justify-content-center">	
+          <div class="main_image"><img src="{{asset(voiture.images)}}" id="main_product_image" width="100%">	
+          </div>	
+        </div>	
+      </div>	
+      <div class="col-md-6">	
+        <div class="p-3 right-side">	
+          <div class="d-flex justify-content-between align-items-center">	
+            <h2>{{ voiture.name }}</h2>	
+          </div>	
+          <div class="mt-2 pr-3 content">	
+            <h5><i class="bi bi-car-front-fill"></i> {{ voiture.description }}</h5>	
+          </div>	
+          <p><i class="bi bi-people"></i> Nombre de places: {{ voiture.places }}</p>
+          <p><i class="bi bi-speedometer"></i> Type de moteur: {{ voiture.moteur }}</p>
+          <p><i class="bi bi-calendar3"></i> Année: {{ voiture.annee }}</p>
+          <p>Tarif à l'heure: {{ voiture.prix }}€</p>	
+          <div class="icon-check">
+          <i class="bi bi-check-lg">Annulation gratuite</i>
+          <i class="bi bi-check-lg">Assistance 7/7j</i>
+          <i class="bi bi-check-lg">Assurance incluse</i>
+          </div>
+          <div class="buttons d-flex flex-row mt-5 gap-3">	
+          
+            <form action="{{ path('app_reservation', {id: voiture.id}) }}">
+            <button class="btn btn-outline-dark">Réserver</button>	
+            </form>
+          </div>	
+        </div>	
+      </div>	
+    </div>	
+  </div> 
+</div>
+
+{# card description #}
+<div class="container mt-5 mb-5">	
+  <div class="card mx-auto" style="width: 70rem;">
+    <div class="description">
+      <h6 class="card-title">DESCRIPTION</h6>
+      
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
+      Some quick example text to build on the card title and make up the bulk of the card's content.
+      Some quick example text to build on the card title and make up the bulk of the card's content.
+      Some quick example text to build on the card title and make up the bulk of the card's content.
+      Some quick example text to build on the card title and make up the bulk of the card's content.
+      </p>
+    
+   </div>
+  </div>
+</div>
+
+{# card conditions #}
+<div class="container mt-5 mb-5">	
+  <div class="card mx-auto" style="width: 70rem; height: 300px">
+    <div class="card-body2">
+      <div class="flex">
+      <h6 class="card-title">CONDITION D'UTILISATION DES VOITURES</h6>
+      <div class="grey">Durée minimale de location <br> 1 heure</div>
+      <div class="grey">Durée maximale de location <br> 90 jours</div>
+      </div>
+
+      <div class="flex">
+      <h6 class="card-title">CARACTÉRISTIQUES TECHNIQUES</h6>
+      <div class="grey">Moteur <br> {{ voiture.moteur }} </div>
+      <div class="grey">Boite <br> {{ voiture.boite }}</div>
+      </div>
+
+      <div class="flex">
+      <h6 class="card-title">OPTIONS ET ACCESSOIRES</h6>
+      <div class="options-accessoires">
+      <div class="options-flex">
+      <div class="options"><i class="bi bi-snow"> Climatisation</i></div>
+      <div class="options"><i class="bi bi-stopwatch"> Régulateur</i></div>
+      <div class="options"><i class="bi bi-android"> Android Auto</i></div>
+      <div class="options"><i class="bi bi-arrow-right-square-fill"> GPS</i></div>
+
+      </div>
+      <div class="options-flex">
+      <div class="options"><i class="bi bi-music-player-fill"> Entrée audio/iPod</i></div>
+      <div class="options"><i class="bi bi-bluetooth"> Bluetooth</i></div>
+      <div class="options"><i class="bi bi-play-circle-fill"> Carplay</i></div>
+      </div>
+      </div>
+      </div>
+    
+   </div>
+  </div>
+</div>
+
+{# Assurance #}
+<div class="container mt-5 mb-5">	
+  <div class="card mx-auto" style="width: 70rem;">
+    <div class="description">
+      <h6 class="card-title">ASSURANCE</h6>
+      
+      <div class="flex-assurance">
+      <img src="../images/maaf.png" width="20%" alt=""> 
+      <div> 
+      <img src="../images/header-maaf-assurance-auto.webp" width="60%" alt="">
+      <p id="assurance-p"><b>Assurance et assistance panne 24h/24 incluses dans le prix.</b></p>
+      </div>  
+      </div>
+   </div>
+  </div>
+</div>
+
+{# témoignage #}
+
+<div class="container mt-5 mb-5">
+    
+    <div class="row g-2">
+        <div class="col-md-4">
+            <div class="card p-3 text-center px-4">
+                
+                <div class="user-image">
+                    
+            <img src="../images/user1.webp" class="rounded-circle" width="80">
+                    
+                </div>
+                
+                <div class="user-content">
+                    
+                    <h5 class="mb-0">Bruce Hardy</h5>
+                    <span>Software Developer</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    
+                </div>
+                
+                <div class="ratings">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            
+            <div class="card p-3 text-center px-4">
+                
+                <div class="user-image">
+                    
+            <img src="../images/user2.jpg" class="rounded-circle" width="83"
+                    >
+                    
+                </div>
+                
+                <div class="user-content">
+                    
+                    <h5 class="mb-0">Marta Smith</h5>
+                    <span>Web Developer</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed do eiusmod tempor incididunt ut. </p>
+                    
+                </div>
+                
+                <div class="ratings">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        <div class="col-md-4">
+            
+            <div class="card p-3 text-center px-4">
+                
+                <div class="user-image">
+                    
+            <img src="../images/user3.jpg" class="rounded-circle" width="92"
+                    >
+                    
+                </div>
+                
+                <div class="user-content">
+                    
+                    <h5 class="mb-0">Veera  Duncan</h5>
+                    <span>Software Architect</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed do eiusmod tempor incididunt ut labore et.</p>
+
+                </div>
+                
+                <div class="ratings">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        
+    </div>
+    
+</div>
+
+{% block footer %}
+{% endblock %}
+
+{% endblock %}
